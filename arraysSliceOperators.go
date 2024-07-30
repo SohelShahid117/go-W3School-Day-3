@@ -191,6 +191,95 @@ func main() {
 	fmt.Printf("numbersCopy = %v\n", numbersCopy)
 	fmt.Printf("length = %d\n", len(numbersCopy))
 	fmt.Printf("capacity = %d\n", cap(numbersCopy))
+
+	var a = 15 + 25 // a is 40
+
+	fmt.Println(a)
+
+	var (
+		sum1 = 100 + 50    // 150 (100 + 50)
+		sum2 = sum1 + 250  // 400 (150 + 250)
+		sum3 = sum2 + sum2 // 800 (400 + 400)
+	)
+
+	fmt.Println(sum1)
+	fmt.Println(sum2)
+	fmt.Println(sum3)
+
+	x := 10
+	y := 3
+
+	fmt.Println(x + y)
+	fmt.Println(x - y)
+	fmt.Println(x * y)
+	fmt.Println(x / y)
+	fmt.Println(x % y)
+	x++
+	fmt.Println(x)
+	y--
+	fmt.Println(y)
+
+	var x2 = 10
+	x2 += 5
+	fmt.Println(x2)
+
+	x2 %= 4
+	fmt.Println(x2)
+
+	var x3 = 5
+
+	fmt.Printf("x3 is %b \n", x3) // 101
+	fmt.Printf("3 is %03b \n", 3) // 011
+
+	x3 &= 3
+
+	fmt.Printf("x now is %03b \n", x3) // 001
+
+	var y2 = 5
+
+	fmt.Printf("y2 is %b \n", y2) // 101
+	fmt.Printf("3 is %03b \n", 3) // 011
+
+	y2 |= 3
+	fmt.Printf("x now is %03b \n", y2) // 111
+
+	fmt.Printf("x is %v \n", x)
+	fmt.Printf("y is %v \n", y)
+	fmt.Println(x > y)
+	fmt.Println(x == y)
+	fmt.Println(x >= y)
+
+	fmt.Println(x > 5 && x < 10)
+	fmt.Println(x > 5 || x < 10)
+	fmt.Println(!(x < 5 && x < 10))
+
+	//Bitwise operators are used on (binary) numbers:
+
+	/*
+			Operator 	Name 	Description 							       Example
+				&  		AND 	Sets each bit to 1 if both bits are 1 		     x & y
+				| 		OR 	    Sets each bit to 1 if one of two bits is 1 	     x | y
+		 		^ 		XOR 	Sets each bit to 1 if only one of two bits is 1  x ^ b
+
+				<< 	  Zero fill Shift left by pushing zeros in from the right    x << 2
+					  left shift
+				>> 	  Signed     Shift right by pushing copies of the leftmost   x >> 2
+					  right 	 bit in from the  left, and let the rightmost
+					  shift		 bits fall off
+
+	*/
+
+	var x5 = 9
+	var y5 = 8
+
+	fmt.Printf("x5 = %b\n", x5)
+	fmt.Printf("y5 = %b\n", y5)
+
+	fmt.Printf("x5 & y5 is %b\n", x5&y5)
+	fmt.Printf("x5 | y5 is %b\n", x5|y5)
+	fmt.Printf("x5 ^ y5 is %b\n", x5^y5)
+	fmt.Printf("x5 << 2 is %b\n", x5<<2)
+	fmt.Printf("x5 >> 2 is %b\n", x5>>2)
 }
 
-//https://www.w3schools.com/go/go_operators.php
+//https://www.w3schools.com/go/go_conditions.php
